@@ -4,6 +4,7 @@ import lombok.Data;
 import org.hibernate.annotations.Table;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import java.io.Serializable;
 
@@ -16,27 +17,25 @@ public class Classifica implements Serializable {
     }
 
     @Id
-    private int posizione;
+    private Integer posizione;
     private String squadra;
     private int punti;
-    private int giocate;
+    private int partite_giocate;
     private int vinte;
-    private int pareggi;
+    private int pareggiate;
     private int perse;
-    private int fatti;
-    private int subiti;
+    private int gol_fatti;
+    private int gol_subiti;
 
-
-
-    public Classifica(int posizione, String squadra, int punti, int giocate, int vinte, int pareggi, int perse, int fatti, int subiti) {
+    public Classifica(int posizione, String squadra, int punti, int partite_giocate, int vinte, int pareggiate, int perse, int gol_fatti, int gol_subiti) {
         this.posizione = posizione;
         this.squadra = squadra;
         this.punti = punti;
-        this.giocate = giocate;
+        this.partite_giocate = partite_giocate;
         this.vinte = vinte;
-        this.pareggi = pareggi;
+        this.pareggiate = pareggiate;
         this.perse = perse;
-        this.fatti = fatti;
-        this.subiti = subiti;
+        this.gol_fatti = gol_fatti;
+        this.gol_subiti = gol_subiti;
     }
 }
